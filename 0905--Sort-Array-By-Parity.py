@@ -14,3 +14,22 @@ class Solution:
             else:
                 odd.append(i)
         return even+odd
+#new solution using two pointers
+class Solution1:
+    def sortArrayByParity(self, A: List[int]) -> List[int]:
+        def even(num):
+            if num%2==0:
+                return True
+            return False
+        front=0
+        back=len(A)-1
+        while front<back:
+            if even(A[back]) and (not even(A[front])):
+                A[back],A[front]=A[front],A[back]
+                front+=1
+                back-=1
+            elif even(A[front]):
+                front+=1
+            elif not even(A[back]):
+                back-=1
+        return A
