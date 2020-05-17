@@ -11,7 +11,29 @@ Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 """
+
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         num=int("".join(map(str,digits)))
-        return list(str(num+1))
+        return list(str(num+1))\
+        """
+        if len(digits)==1:
+            if digits[0]==9:
+                return [1,0]
+            else:
+                digits[0]+=1
+                return digits
+        if digits[-1]!=9:
+            digits[-1]+=1
+        else:
+            n=len(digits)-2
+            digits[-1]=0
+            while digits[n]==9 and n>=0:
+                digits[n]=0
+                n-=1
+            if digits[n]==0:
+                return [1]+digits
+            else:
+                digits[n]+=1
+        return digits
+        """
