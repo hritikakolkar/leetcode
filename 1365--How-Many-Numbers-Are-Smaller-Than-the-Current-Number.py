@@ -25,3 +25,17 @@ class Solution:
                 mapping[n] = i
         return [mapping[n] for n in nums]
 """
+#Leetcode Copied sultion 13900 kb
+"""
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        output_count = []
+        count = 0
+        for i in range(len(nums)) :
+            for j in nums:
+                if nums[i] > j :
+                    count += 1
+            output_count.append(count)
+            count = 0
+        return output_count    
+"""
