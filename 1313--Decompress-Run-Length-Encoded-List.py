@@ -12,3 +12,12 @@ class Solution:
         for i in range(0,len(nums),2):
             lst += [nums[i+1]]*nums[i]
         return lst
+#After 11 months code
+"""    
+class Solution:
+    def decompressRLElist(self, nums: List[int]) -> List[int]:
+        decompress=[]
+        for i in range(0,len(nums),2) :
+            decompress += nums[i]*[nums[i + 1]]
+        return decompress
+"""
