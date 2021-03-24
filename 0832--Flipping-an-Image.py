@@ -16,7 +16,20 @@ class Solution:
             for j in range(len(image[i])):
                 image[i][j]=1-image[i][j]
         return image
-                
+
+#Great solution fro leetcode
+"""
+class Solution:
+    def flipAndInvertImage(self, A: List[List[int]]) -> List[List[int]]:
+        for i in A:
+            l = 0
+            r = len(i) -1
+            while(l<=r):
+                i[r], i[l] = 1-i[l],1-i[r]
+                l+=1
+                r-=1
+        return A
+ """
 #old Solution
 """
 class Solution:
