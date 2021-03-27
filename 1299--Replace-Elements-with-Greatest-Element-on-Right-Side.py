@@ -24,3 +24,24 @@ class Solution:
             arr[i]=max(arr[i+1:])
         arr[-1]=-1
         return arr
+
+      
+#Good Solution
+"""
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        if not arr:
+            return None
+        
+        max_val = arr[-1]
+        
+        for i in reversed(range(len(arr))):
+            current = arr[i]
+            arr[i] = max_val
+            if max_val < current:
+                max_val = current
+                
+        arr[-1] = -1 
+        
+        return arr
+"""
