@@ -18,3 +18,8 @@ class Solution:
         for i in range(0,len(nums),2):
             sum+=nums[i]
         return sum
+
+#Good Solution
+class Solution1:
+    def arrayPairSum(self, nums: List[int]) -> int:
+        return sum(sorted(nums)[::2])
