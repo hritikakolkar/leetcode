@@ -31,8 +31,8 @@ class Solution2:
         for i in range(n):
             max_list.append(max([row[i] for row in matrix ]))
         
-        return [max_lsit & min_list]
-        
+        return [lucky for lucky in min_list if lucky in max_list]
+       
 """
 class Solution:
     def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
