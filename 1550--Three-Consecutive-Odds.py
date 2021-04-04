@@ -9,7 +9,7 @@ class Solution:
         return False
  
  #Found Good Solution 99% space complexities
- class Solution:
+ class Solution1:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
         count=0
         for num in arr:
@@ -19,5 +19,19 @@ class Solution:
                 count=0
             if count==3:
                 return True
+        return False
+
+#Good with both complexities
+class Solution2:
+    def threeConsecutiveOdds(self, arr: List[int]) -> bool:
+        count=0
+        for num in arr:
+            if num & 1:
+                count+=1
+                if count==3:
+                    return True
+            else:
+                count=0
+
         return False
             
