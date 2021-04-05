@@ -13,3 +13,11 @@ class Solution:
                 if i>lucky:
                     lucky=i
         return lucky 
+
+#Solution using hash table
+class Solution1:
+    def findLucky(self, arr: List[int]) -> int:
+        return max(lucky if  lucky == count else -1 for lucky,count in collections.Counter(arr).items())
+
+   
+  
