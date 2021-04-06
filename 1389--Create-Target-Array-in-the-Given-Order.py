@@ -19,3 +19,16 @@ class Solution:
             target=push(target,index[i],nums[i])
         return target
         
+class Solution1:
+    def createTargetArray(self, nums: List[int], index: List[int]) -> List[int]:
+        target=list()
+        for i in range(len(nums)) :
+            target.insert(index[i],nums[i])
+        return target
+
+class Solution2:
+    def createTargetArray(self, nums: List[int], index: List[int]) -> List[int]:
+        arr = []
+        for n,i in zip(nums,index): 
+            arr[i:i] = [n]
+        return arr
