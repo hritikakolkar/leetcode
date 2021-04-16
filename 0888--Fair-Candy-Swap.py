@@ -23,3 +23,58 @@ class Solution:
             val=int(candy_lenA-(sum_A_B)/2)
             if val in set_B:
                 return [candy_lenA,val]
+
+# After 11 months solution
+# Time Limit Exceeded
+class Solution:
+    def fairCandySwap(self, A: List[int], B: List[int]) -> List[int]:
+        s = sum(A) -  sum(B)
+        for i in range(len(A)):
+            for j in range(len(B)):
+                if s - 2*A[i] + 2*B[j] == 0 :
+                    return [A[i],B[j]]
+                  
+"""
+Runtime: 3044 ms, faster than 22.16% of Python3 online submissions for Fair Candy Swap.
+Memory Usage: 16.3 MB, less than 76.53% of Python3 online submissions for Fair Candy Swap.
+"""
+class Solution:
+    def fairCandySwap(self, A: List[int], B: List[int]) -> List[int]:
+        s = int((sum(B) -  sum(A))/2)
+        for c_A in A:
+            if c_A + s in B:
+                return [c_A, c_A + s]
+            
+"""
+Runtime: 4972 ms, faster than 13.04% of Python3 online submissions for Fair Candy Swap.
+Memory Usage: 17.3 MB, less than 16.17% of Python3 online submissions for Fair Candy Swap.
+"""
+class Solution:
+    def fairCandySwap(self, A: List[int], B: List[int]) -> List[int]:
+        s = int((sum(B) -  sum(A))/2)
+        for c_A in set(A):
+            if c_A + s in set(B):
+                return [c_A, c_A + s]
+"""
+Runtime: 356 ms, faster than 72.10% of Python3 online submissions for Fair Candy Swap.
+Memory Usage: 17.4 MB, less than 7.17% of Python3 online submissions for Fair Candy Swap.
+"""
+class Solution:
+    def fairCandySwap(self, A: List[int], B: List[int]) -> List[int]:
+        s = int((sum(B) -  sum(A))/2)
+        setA, setB = set(A), set(B)
+        for c_A in setA:
+            if c_A + s in setB:
+                return [c_A, c_A + s]
+              
+"""
+Runtime: 360 ms, faster than 63.36% of Python3 online submissions for Fair Candy Swap.
+Memory Usage: 16.8 MB, less than 35.59% of Python3 online submissions for Fair Candy Swap.
+"""
+class Solution:
+    def fairCandySwap(self, A: List[int], B: List[int]) -> List[int]:
+        s = int((sum(B) -  sum(A))/2)
+        setB = set(B)
+        for c_A in A:
+            if c_A + s in setB:
+                return [c_A, c_A + s]
