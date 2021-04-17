@@ -11,4 +11,4 @@ class Solution:
             if num > temp: dec = False
             temp = num
         return inc or dec
-class Solui
+
