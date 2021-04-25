@@ -61,4 +61,19 @@ class Solution:
                 return index
             cumsum += nums[index]
         return -1
+       
+"""
+Runtime: 136 ms, faster than 98.20% of Python3 online submissions for Find Pivot Index.
+Memory Usage: 15.4 MB, less than 72.86% of Python3 online submissions for Find Pivot Index.
+"""
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        total=sum(nums)
+        prev=0
+        for i,val in enumerate(nums):
+            if prev==total-val:
+                return i
+            prev+=val
+            total-=val
+        return -1
                 
