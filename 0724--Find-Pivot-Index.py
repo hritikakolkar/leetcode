@@ -29,3 +29,36 @@ class Solution:
             if sum(nums[:i])==sum(nums[i+1:]):
                 return i
         return -1
+  
+# Solved after eleven months 
+"""
+Runtime: 152 ms, faster than 54.11% of Python3 online submissions for Find Pivot Index.
+Memory Usage: 15.2 MB, less than 99.45% of Python3 online submissions for Find Pivot Index.
+"""
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        for idx in range(1,len(nums)) :
+            nums[idx] += nums[idx-1]
+        if nums[-1]-nums[0] == 0 :
+            return 0
+        for idx in range(1,len(nums)-1):
+            if nums[idx-1] == nums[-1] - nums[idx] :
+                return idx
+        if nums[-2]==0:
+            return len(nums)-1
+        return -1
+
+"""
+Runtime: 144 ms, faster than 86.52% of Python3 online submissions for Find Pivot Index.
+Memory Usage: 15.3 MB, less than 93.46% of Python3 online submissions for Find Pivot Index.
+"""
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        s = sum(nums)
+        cumsum = 0
+        for index in range(len(nums)) :
+            if cumsum == s-cumsum-nums[index]:
+                return index
+            cumsum += nums[index]
+        return -1
+                
