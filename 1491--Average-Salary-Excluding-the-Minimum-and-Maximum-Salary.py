@@ -1,3 +1,7 @@
+"""
+Runtime: 32 ms, faster than 54.66% of Python3 online submissions for Average Salary Excluding the Minimum and Maximum Salary.
+Memory Usage: 14.3 MB, less than 7.81% of Python3 online submissions for Average Salary Excluding the Minimum and Maximum Salary.
+"""
 class Solution:
     def average(self, salary: List[int]) -> float:
         """
