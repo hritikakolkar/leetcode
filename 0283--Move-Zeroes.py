@@ -19,3 +19,6 @@ class Solution:
                 nums.remove(0)
             nums+=[0]*coun
             
+            
+            
+            
