@@ -17,8 +17,6 @@ Add one letter 'a' to the end of each word per its word index in the sentence, s
 For example, the first word gets "a" added to the end, the second word gets "aa" added to the end and so on.
 Return the final sentence representing the conversion from S to Goat Latin. 
 """
-
-
 class Solution:
     def toGoatLatin(self, S: str) -> str:
         words=S.split()
