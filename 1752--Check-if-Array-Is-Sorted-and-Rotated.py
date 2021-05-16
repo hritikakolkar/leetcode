@@ -4,8 +4,17 @@ Memory Usage: 14 MB, less than 98.82% of Python3 online submissions for Check if
 """
 class Solution:
     def check(self, nums: List[int]) -> bool:
-        count=0
-        for i in range(len(nums)):
-            if nums[i-1]>nums[i]:
-                count+=1
-        return count<=1
+        count = 0
+        for idx in range(len(nums)) :
+            if nums[idx-1] > nums[idx] :
+                count += 1
+        return count <= 1
+class Solution:
+    def check(self, nums: List[int]) -> bool:
+        count = 0
+        for idx in range(len(nums)) :
+            if nums[idx-1] > nums[idx] :
+                count += 1
+                if count > 1 :
+                    return False
+        return True 
