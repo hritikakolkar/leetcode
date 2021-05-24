@@ -1,5 +1,5 @@
 # LEETCODE SOLUTIONS IN PYTHON
-### 😄 HAVE A New GOOD SOLUTION FOR A QUESTION IN THIS REPO THEN CONTRIBUTE BRUH. 😄
+### 😄 PR for a new solution to the questions in this repo. 😄
 + [Leetcode Profile Link](https://leetcode.com/hritikakolkar/)
 + [Data Structure and Algorithm in Python](https://github.com/HRITIKAKOLKAR/DSA)
 
