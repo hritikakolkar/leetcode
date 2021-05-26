@@ -1,6 +1,6 @@
 """
-Runtime: 32 ms, faster than 45.39% of Python3 online submissions for Middle of the Linked List.
-Memory Usage: 14.2 MB, less than 41.71% of Python3 online submissions for Middle of the Linked List.
+Runtime: 24 ms, faster than 94.13% of Python3 online submissions for Middle of the Linked List.
+Memory Usage: 14.2 MB, less than 41.18% of Python3 online submissions for Middle of the Linked List.
 """
 # Definition for singly-linked list.
 # class ListNode:
