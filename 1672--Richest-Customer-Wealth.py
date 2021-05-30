@@ -11,3 +11,4 @@ class Solution:
             wealth = sum(customer_account)
             max_wealth = max(wealth,max_wealth) 
         return max_wealth
+    
