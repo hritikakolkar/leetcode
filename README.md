@@ -1,4 +1,4 @@
-# LEETCODE SOLUTIONS IN PYTHON
+# LEETCODE SOLUTIONS IN PYTHON FOR DATA SCIENTIST
 ### 😄 PR for a new solution to the questions in this repo. 😄
 + [Leetcode Profile Link](https://leetcode.com/hritikakolkar/)
 + [Data Structure and Algorithm in Python](https://github.com/HRITIKAKOLKAR/DSA)
