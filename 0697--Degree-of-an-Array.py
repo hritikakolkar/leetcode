@@ -18,7 +18,7 @@ class Solution:
         for key in maxFreqList :
             ans = min(ans, end[key] - start[key])
         return ans + 1
-      
+
 """
 Runtime: 232 ms, faster than 67.01% of Python3 online submissions for Degree of an Array.
 Memory Usage: 15.2 MB, less than 98.07% of Python3 online submissions for Degree of an Array.
