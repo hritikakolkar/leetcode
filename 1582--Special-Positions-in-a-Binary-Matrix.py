@@ -9,8 +9,7 @@ class Solution:
                     if mat[i].count(1)==1 and [mat[i][j] for i in range(m) ].count(1)==1:
                         special += 1
         return special
-    
- 
+
 # good soltuion copied
 class Solution1:
     def numSpecial(self, mat: List[List[int]]) -> int:
