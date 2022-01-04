@@ -20,6 +20,10 @@ class Solution:
         return sum
 
 #Good Solution
+"""
+Runtime: 329 ms, faster than 18.79% of Python3 online submissions for Array Partition I.
+Memory Usage: 16.7 MB, less than 91.20% of Python3 online submissions for Array Partition I.
+"""
 class Solution1:
     def arrayPairSum(self, nums: List[int]) -> int:
         return sum(sorted(nums)[::2])
