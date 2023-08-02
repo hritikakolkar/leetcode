@@ -25,3 +25,38 @@ class Solution:
             return False
 
 # two pointer approach
+# 59ms Beats 94.84%of users with Python3
+# 20.21mb Beats 87.57%of users with Python3
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        if head and head.next:
+            slowPtr = head
+            fastPtr = head.next.next
+            while slowPtr != fastPtr:
+                if not (slowPtr and fastPtr and fastPtr.next):
+                    return False
+                slowPtr = slowPtr.next
+                fastPtr = fastPtr.next.next
+            return True
+        else:
+            return False
+
+# tmp method
+# 49ms Beats 99.37%of users with Python3
+# 18.48mb Beats 99.60%of users with Python3
+"""
+Create a "visited" node (value is infinity, next pointer is None)
+Every time we visit a node, we replace it with that value and next pointer
+If we visit such a node in the future, that means there must be a cycle!    
+"""
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        tmp = ListNode()
+        currentNode = head
+        while currentNode:
+            if currentNode == tmp:
+                return True
+            nextNode = currentNode.next
+            currentNode.next = tmp
+            currentNode = nextNode
+        return False
