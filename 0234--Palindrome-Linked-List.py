@@ -22,3 +22,30 @@ class Solution:
         return True
 
 # O(n) time and O(1) space Solution, Reversing half of the list
+# 482ms Beats 99.75%of users with Python3
+# 33.53mb Beats 96.21%of users with Python3
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        halfPtr = head
+        lastPtr = head
+        prevPtr = None
+        if head.next == None:
+            return True
+
+        while lastPtr and lastPtr.next:
+            lastPtr = lastPtr.next.next
+
+            tmpPtr = halfPtr.next
+            halfPtr.next = prevPtr
+            prevPtr = halfPtr
+            halfPtr = tmpPtr
+
+        if lastPtr != None:
+            halfPtr = halfPtr.next
+        
+        while halfPtr and prevPtr:
+            if halfPtr.val != prevPtr.val:
+                return False
+            halfPtr = halfPtr.next
+            prevPtr = prevPtr.next
+        return True
